@@ -6,7 +6,7 @@ const PremiumPlans = () => {
     <div>
       <div className="premiumPlans">
         <div className="premiumPlansHeader">
-          <span>Make the wise decitions for your business</span>
+          <span>Make the wise decisions for your business</span>
           <p>Choose from our affordable 3 packages</p>
         </div>
         <div className="premiumPlansContent">

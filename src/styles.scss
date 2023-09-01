@@ -29,7 +29,6 @@ $default-font: "Inter", sans-serif !important;
 
 body {
   background-color: #12141d;
-  padding: $default-padding;
   padding-top: 20px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -69,6 +68,10 @@ body {
   }
 }
 .App {
+  width: 100vw;
+  @include respond-to(smallphones){
+    width: 130vw;
+  }
   .navigationBar {
     .navigationBarContents {
       nav {
@@ -80,9 +83,7 @@ body {
         @include respond-to(mobile) {
           justify-content: space-evenly;
         }
-        @include respond-to(smallphone) {
-          justify-content: space-between;
-        }
+     
         .logo {
           display: flex;
           align-items: center;
@@ -486,6 +487,9 @@ body {
       width: 500px;
       text-align: center;
       font-family: $default-font;
+      @include respond-to(mobile){
+        width: 300px;
+      }
       span {
         color: #e0e0e0;
         font-weight: 600;
@@ -581,8 +585,9 @@ body {
           justify-content: center;
           align-items: center;
           width: 500px;
-          @include respond-to(smallphones) {
+          @include respond-to(mobile) {
             font-size: 20px;
+            width: 300px;
           }
         }
     }
