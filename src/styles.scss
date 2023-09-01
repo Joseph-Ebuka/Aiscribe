@@ -490,6 +490,9 @@ body {
         color: #e0e0e0;
         font-weight: 600;
         font-size: 40px;
+        @include respond-to(mobile){
+          font-size: 25px;
+        }
       }
       p {
         color: #b7b7b7;
