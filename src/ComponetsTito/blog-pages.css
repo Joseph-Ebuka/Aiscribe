@@ -3,12 +3,10 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-p {
-  max-width: 80%;
-}
+
 .blogdiv {
   position: relative;
-  background-color: rgb(5, 5, 34);
+  background-color:#12141D;
   height: 200%;
   width: 100%;
   padding-top: 3vh;
@@ -24,6 +22,12 @@ p {
   border-radius: 499px;
   background: rgba(63, 160, 251, 0.1);
   filter: blur(75px);
+}
+@media (max-width:400px){
+  .blogbacklight{
+    display: none;
+  }
+  
 }
 .blogbacklight2 {
   position: absolute;
@@ -74,7 +78,7 @@ p {
   padding-left: 5%;
 }
 .pagesdiv {
-  background-color: rgb(5, 5, 34);
+  background-color:#12141D;
   height: 105vh;
   width: 100%;
   padding-top: 7vh;
@@ -103,7 +107,7 @@ p {
   text-align: center;
 }
 .pagesblock {
-  background-color: rgba(5, 5, 34, 0.6);
+  background-color:#12141D;
   height: 60vh;
   width: 60vw;
   box-sizing: border-box;
@@ -124,12 +128,11 @@ p {
   flex-basis: 30%;
 }
 .display {
-  width: 40vw;
-  height: 56vh;
   border-radius: 15px;
   flex-basis: 60%;
   background-color: #282a37;
   margin-bottom: 20px;
+  width: 100%;
 }
 .buttonsdiv {
   justify-content: center;
@@ -195,9 +198,6 @@ hr {
 }
 
 @media (max-width: 1150px) {
-  .blogdiv {
-    height: 180vh;
-  }
   .blogcontents {
     width: 400px;
     display: flex;
@@ -283,7 +283,6 @@ hr {
 @media (max-width: 420px) {
   .blogdiv {
     width: 450px;
-    height: 260vh;
   }
   .flexBasic {
     width: 450px;

@@ -33,6 +33,10 @@ body {
   padding-top: 20px;
   overflow-y: scroll;
   overflow-x: hidden;
+  @include respond-to(smallphones) {
+    
+    padding: 0;
+  }
 }
 .lorem {
   text-align: center;
@@ -70,8 +74,15 @@ body {
       nav {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         font-family: "Inter", sans-serif !important;
+        padding: 50px;
+        @include respond-to(mobile) {
+          justify-content: space-evenly;
+        }
+        @include respond-to(smallphone) {
+          justify-content: space-between;
+        }
         .logo {
           display: flex;
           align-items: center;
@@ -80,22 +91,27 @@ body {
           width: 544px;
           height: 24px;
           .imglogo {
-            width: 59px;
+            width: 150px;
             height: 24px;
-            gap: 16px;
+            gap: 20px;
+            margin: 20px;
             display: flex;
             align-items: center;
           }
+          img {
+            width: 50px;
+            height: 50px;
+          }
           h1 {
             color: #ffffff;
-            font-size: 18px;
+            font-size: 35px;
             font-weight: 700;
             line-height: 21.78px;
           }
         }
         .navlinks {
           display: flex;
-          gap: 10px;
+          gap: 30px;
           width: 422px;
           justify-content: space-between;
           a {
@@ -105,6 +121,7 @@ body {
             display: flex;
             align-items: baseline;
             text-decoration: none;
+            font-size: 20px;
             &:hover {
               color: #121a47;
             }
@@ -129,7 +146,7 @@ body {
             justify-content: center;
             align-items: center;
             position: fixed;
-            left: 0;
+            left: 0px;
             top: 0;
             background-color: #010727c2;
             height: 100vh;
@@ -149,6 +166,10 @@ body {
               border-bottom: 1px solid #061638;
             }
           }
+          @include respond-to(smallphones) {
+            width: 60%;
+          }
+          
         }
         .signin-up {
           display: flex;
@@ -297,7 +318,7 @@ body {
         border-radius: 10px;
         position: relative;
         box-shadow: 0.5px -1.5px 9.5px -2px #121a47;
-        @include respond-to(smallphones){
+        @include respond-to(smallphones) {
           width: 88%;
         }
         .back {
@@ -329,7 +350,7 @@ body {
           display: flex;
           color: #ffffff;
           font-family: "Bitter", serif;
-           @include respond-to(smallphones){
+          @include respond-to(smallphones) {
             font-size: 10px;
           }
           .login-signup {
@@ -340,7 +361,6 @@ body {
           font-size: 25px;
           font-weight: 400;
           color: #2a7bc7;
-         
         }
         .inputs {
           display: flex;
@@ -377,6 +397,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
     .text {
       font-family: $default-font;
       color: #b7b7b7;
@@ -392,6 +413,219 @@ body {
       @include respond-to(mobile) {
         width: 320px;
         height: 70px;
+      }
+    }
+  }
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #252835;
+    grid-gap: 30px;
+    height:max-content;
+    margin-bottom: 50px;
+    @include respond-to(mobile){
+     width: 100%;
+      box-sizing: border-box;
+    }
+     @include respond-to(smallphone) {
+          width: 100vh;
+        }
+    .contactHeader {
+      width: 500px;
+      span {
+        color: #e0e0e0;
+        font-weight: 600;
+        font-size: 40px;
+        font-family: $default-font;
+        @include respond-to(mobile){
+          font-size: 20px;
+          box-sizing: border-box;
+          word-wrap: break-word;
+        }
+      }
+      p {
+        color: #e0e0e0;
+        font-family: $default-font;
+        @include respond-to(mobile){
+          font-size: 13px;
+          box-sizing: border-box;
+          display: none;
+        }
+      }
+    }
+    .contactReviews {
+      display: flex;
+      gap: 19px;
+      flex-direction: column;
+      .contactReviews1 {
+        display: flex;
+        gap: 19px;
+        @include respond-to(mobile){
+          flex-direction: column;
+        }
+      }
+      .contactReviews2 {
+        display: flex;
+        gap: 19px;
+        @include respond-to(mobile){
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  .premiumPlans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .premiumPlansHeader {
+      width: 500px;
+      text-align: center;
+      font-family: $default-font;
+      span {
+        color: #e0e0e0;
+        font-weight: 600;
+        font-size: 40px;
+      }
+      p {
+        color: #b7b7b7;
+      }
+    }
+    .premiumPlansContent {
+      display: flex;
+      gap: 20px;
+      @include respond-to(mobile){
+        flex-direction: column;
+      }
+      .plan{
+        display: flex;
+        flex-direction: column;
+        width: 300px;height: 500px;
+        margin: 20px;
+        border-radius: 30px;
+        padding:15px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #252835;
+        transform: 0.3s;
+        &:hover{
+          transform: scale(1.1);
+          cursor: pointer;
+          -webkit-box-shadow: 1.5px 1.5px 12.5px 0.5px #222965;
+          -moz-box-shadow: 1.5px 1.5px 12.5px 0.5px #222965;
+          box-shadow: 1.5px 1.5px 12.5px 0.5px #222965;
+        }
+        .premiumPlanPrice{
+          p{
+            color: #b7b7b7;
+            font-size: 18px;
+            font-weight: 600;
+          }
+          span{
+            display: flex;
+            align-items: center;
+            color: #e0e0e0;
+            font-size: 40px;
+          }
+          .suitable{
+            font-weight: 400;
+          }
+         
+        }
+        .premiumPlanContent{
+          span{
+            font-weight: 600;
+            font-size: 20px;
+            color: #e0e0e0;
+          }
+          p{
+            color: #b7b7b7;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+   
+  }
+  .client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .clientCatch{
+      background: linear-gradient(90deg, #2b59ff 0%, #bb2bff 100%);
+      width: 60%;
+      height: 100px;
+      display: flex;
+      gap: 20px;
+      margin-top: 50px;
+      justify-content: center;
+        align-items: center;
+        @include respond-to(mobile){
+          width: 100%;
+          flex-direction: column;
+          gap: 0px;
+
+        }
+        span{
+          color: #e0e0e0;
+          font-size: 30px;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 500px;
+          @include respond-to(smallphones) {
+            font-size: 20px;
+          }
+        }
+    }
+    
+  }
+  .footer{
+    .footerContents{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include respond-to(mobile){
+        flex-direction: column;
+      }
+      .content1{
+        display: flex;
+        margin:100px;
+        gap: 300px;
+        @include respond-to(mobile){
+          margin: 10px;
+          gap: 10px;
+        }
+        
+        .boxLeft{
+          margin: 100px;
+          span{
+            color: #e0e0e0;
+            font-weight: 600;
+            font-size: 20px;
+          }
+          p{
+            color: #b7b7b7;
+            font-size: 18px;
+          }
+        }
+        .boxRight{
+          margin: 100px;
+          span{
+            color: #e0e0e0;
+            font-weight: 600;
+            font-size: 20px;
+          }
+          p{
+            color: #b7b7b7;
+            font-size: 18px;
+          }
+        }
       }
     }
   }

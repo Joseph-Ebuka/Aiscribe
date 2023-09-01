@@ -8,8 +8,7 @@ import Signin from "./Components/Signin";
 import { Loader } from "./Components/Loader";
 import Pages from "./ComponetsTito/Pages";
 import Blog from "./ComponetsTito/blog";
-import Contact from "./ComponentsVictor/component/Contact";
-import "./ComponentsVictor/component/Victor.css"
+import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -20,45 +19,37 @@ function App() {
           path="/"
           index
           element={
-            <React.Suspense fallback={<Loader />}>
+            <Suspense fallback={<Loader />}>
               <Home />
-            </React.Suspense>
+            </Suspense>
           }
         />
 
         <Route
           path="pages"
           element={
-            <React.Suspense fallback={<Loader />}>
+            <Suspense fallback={<Loader />}>
               <Pages />
-            </React.Suspense>
+            </Suspense>
           }
         />
 
         <Route
           path="blog"
           element={
-            <React.Suspense fallback={<Loader />}>
+            <Suspense fallback={<Loader />}>
               <Blog />
-            </React.Suspense>
+            </Suspense>
           }
         />
 
-        <Route
-          path="contact"
-          element={
-            <React.Suspense fallback={<Loader />}>
-              <Contact />
-            </React.Suspense>
-          }
-        />
-
+        <Route path="contact" element={<Contact />} />
         <Route
           path="signup"
           element={
-            <React.Suspense fallback={<Loader />}>
+            <Suspense fallback={<Loader />}>
               <Signup />
-            </React.Suspense>
+            </Suspense>
           }
         />
         <Route path="signin" element={<Signin />} />

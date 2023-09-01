@@ -32,7 +32,7 @@ const Signin = () => {
             ></i>
             <div className="logo">
               <img src={logo} alt="" />
-              <span>AI</span>
+              <span>Aiscribe</span>
             </div>
             <p>Register</p>
             <div className="inputs">

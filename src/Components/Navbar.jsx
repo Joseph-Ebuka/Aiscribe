@@ -32,7 +32,7 @@ const Navbar = () => {
             <div className="logo">
               <div className="imglogo">
                 <img src={logo} alt="logo" />
-                <h1>AI</h1>
+                <h1>Aiscribe</h1>
               </div>
               <div className="navlinks">
                 <NavLink to="/">Demo</NavLink>

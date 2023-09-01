@@ -3,7 +3,9 @@ import Button from "./Button";
 import video from "./video-circle.png";
 import Sponsors from "./Sponsors";
 import { Loader } from "./Loader";
-
+import Blog from "../ComponetsTito/blog";
+import Pages from "../ComponetsTito/Pages";
+import Contact from "./Contact";
 const Home = () => {
   return (
     <>
@@ -60,6 +62,10 @@ const Home = () => {
           <div className="boxright"></div>
         </div>
         <Sponsors />
+        <Blog/>
+        <Pages/>
+
+        <Contact/>
       </Suspense>
     </>
   );
