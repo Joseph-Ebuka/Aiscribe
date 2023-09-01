@@ -132,8 +132,9 @@ body {
   border-radius: 15px;
   flex-basis: 60%;
   background-color: #282a37;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
   width: 100%;
+  height: 55vh;
 }
 .buttonsdiv {
   justify-content: center;
@@ -241,12 +242,13 @@ hr {
   .pagesheader h3 {
     font-size: 17px;
     flex-wrap: nowrap;
+    margin-right: 50px;
   }
   .pagesblock {
     display: block;
   }
   .buttonsdiv {
-    width: 60vw;
+    width: 73vw;
     height: 60vh;
     border-radius: 10px;
     flex-basis: 30%;
@@ -255,7 +257,7 @@ hr {
     font-size: 20px;
   }
   .display {
-    height: 105vh;
+    height: fit-content;
   }
   .pagescomp {
     width: 70%;
@@ -306,7 +308,7 @@ hr {
   }
   .pagesdiv {
     width: 450px;
-    height: 310vh;
+    height: 170vh;
 
   }
   .blogbacklight {
@@ -314,5 +316,11 @@ hr {
   }
     .blogbacklight2 {
     top: 0;
+  }
+  .buttonsdiv {
+    width: 125vw;
+  }
+  .pagesheader h3 {
+    margin-left: 200px;
   }
 }
