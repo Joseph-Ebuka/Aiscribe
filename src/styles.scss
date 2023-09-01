@@ -609,7 +609,7 @@ body {
       .content1{
         display: flex;
         margin:100px;
-        gap: 300px;
+        gap: 100px;
         @include respond-to(mobile){
           margin: 10px;
           gap: 10px;

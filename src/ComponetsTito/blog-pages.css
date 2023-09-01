@@ -297,11 +297,12 @@ hr {
     width: 270px;
     height: 270px;
     padding-top: 5px;
-    padding-left: 15px;
+    padding-left: 60px;
   }
   .display {
-    height: fit-content;
-    width: 80%;
+    height: max-content;
+    padding: 5px;
+    width: 100vw;
   }
   .pagesdiv {
     width: 450px;

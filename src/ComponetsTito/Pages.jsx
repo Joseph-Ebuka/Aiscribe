@@ -45,7 +45,7 @@ export default function Pages() {
   const fifthHandle = () => {
     setFirst(false);
     setSecond(false);
-    setFifth(false);
+    setThird(false);
     setFourth(false);
     setFifth(true);
     setSixth(false);
@@ -53,7 +53,7 @@ export default function Pages() {
   const sixthHandle = () => {
     setFirst(false);
     setSecond(false);
-    setFifth(false);
+    setThird(false);
     setFourth(false);
     setFifth(false);
     setSixth(true);
