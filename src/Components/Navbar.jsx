@@ -36,7 +36,6 @@ const Navbar = () => {
               </div>
               <div className="navlinks">
                 <NavLink to="/">Demo</NavLink>
-                <NavLink to="/about">About</NavLink>
                 <NavLink to="/blog">Blog</NavLink>
                 <NavLink to="/pages">Pages</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
